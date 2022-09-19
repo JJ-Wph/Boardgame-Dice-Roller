@@ -72,7 +72,7 @@ p, li, label {
     font-size: 1.5vw;
 }
 
-select {
+/* select {
     height: 4vh;
     width: 6vw;
     min-width: 160px;
@@ -82,11 +82,13 @@ select {
     color: rgba(191, 192, 191, 0.692);
     border: none;
     border-radius: 5px;
-}
+} */
 
-button {
-    height: 4vh;
-    width: 18vh;
+button, select {
+    height: 4vw;
+    width: 18vw;
+    max-height: 50px;
+    max-width: 200px;
     margin: 1vh;
     background-color: rgb(9, 1, 22);
     color: rgba(94, 255, 0, 0.692);
@@ -121,7 +123,7 @@ button:active {
     display: none;
 }
 
-@media only screen and (max-width:550px) {
+@media only screen and (max-width:660px) {
     .container {
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(8, 1fr);
@@ -149,18 +151,22 @@ button:active {
     .dice {
         font-size: 12vw;
     }
-    button {
+    button, select {
         height: 3vh;
-        width: 12vh;
+        width: 20vw;
         margin: 1vh;
-        font-size: 1.5vh;
+        font-size: 1vh;
     }
 
-    select {
+    label {
+        font-size: 1vh;
+    }
+
+    /* select {
         height: 2.5vh;
         width: 25vw;
         font-size: 1.5vh;
-    }
+    } */
     h1 {
         font-size: 5vw;
         margin-top: 1vh;
