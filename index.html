@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dice Roller</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/windows/32/000000/dice-six.png"/>
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <span>
+                <h1>Board Game Dice Roller</h1>
+                <label>Typ jednostki</label>
+                <select id="unit_type">
+                    <option value="" disabled selected>Select</option>
+                    <option value="3">Dowódca(3 kości)</option>
+                    <option value="4">Dowódca(4 kości)</option>
+                    <option value="5">Dowódca(5 kości)</option>
+                    <option value="2">Przyboczny(2 kości)</option>
+                    <option value="1">Wojownik(1 kość)</option>
+                    <option value="0.5">Wieśniak (0.5 kości)</option>
+                  </select>
+                <label>Liczba zołnierzy w oddziale</label>
+                <select id="numberOf">
+                    <option value="" disabled selected>Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                <label>Dodatkowe kości</label>
+                <select id="numberOfAdd">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                  <label>Wskaźnik obrony przeciwnika</label>
+                  <select id="numberOfDeff">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+            </span>
+            <span class="buttonspan">
+                <button onclick="getDicesFromStorage()">Wczytaj wynik</button>
+                <button onclick="saveDicesToStorage()">Zapisz wynik</button>
+                <button onclick="generateDice()">Generuj</button>
+                <button onclick="rollDice()">Rzuć</button>
+            </span>
+        </div>
+        <div class="third">
+            <p class="green">Trafiło:<p class="green" id="hits">0</p></p>
+            <p class="red">Chybiło:<p class="red" id="misses">0</p></p>
+        </div>
+        <div class="second">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
