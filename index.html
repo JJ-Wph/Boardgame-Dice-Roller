@@ -64,11 +64,23 @@
                 <button onclick="rollDice()">Rzuć</button>
             </span>
         </div>
+        <div class="second"></div>
         <div class="third">
-            <p class="green">Trafiło:<p class="green" id="hits">0</p></p>
-            <p class="red">Chybiło:<p class="red" id="misses">0</p></p>
+            <h1 class="green">Trafiło:<h1 class="green" id="hits">0</h1></h1>
+            <h1 class="red">Chybiło:<h1 class="red" id="misses">0</h1></h1>
         </div>
-        <div class="second">
+        <div class="fourth" id="fourth">
+            <h1>Board Game Dice Roller</h1>
+            <p>Aplikacja symuluje rzucanie kośćmi w nieistniejącej wojennej grze planszowej. Ilość wygenerowanych kości zależy od kilku modyfikatorów: </p>
+            <ul>
+                <li>Typ jednostki - każdy typ jednostki posiada swoją unikatową liczbę kości</li>
+                <li>Liczba żołnierzy w oddziale</li>
+                <li>Dodatkowe kości</li>
+            </ul>
+            <p>Ostateczną liczbę kości oblicza się według wzoru:</p>
+            <p>(Typ jednostki * Liczba żołnierzy) + Dodatkowe kości</p>
+            <p>Wskaźnik obrony przeciwnika określa minimalny wynik rzutu potrzebny do zadania obrażenia. </p>
+            <button onclick="closeDiv()">Rozumiem</button>
         </div>
     </div>
     <script src="script.js"></script>

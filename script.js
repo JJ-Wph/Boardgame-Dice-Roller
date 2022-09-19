@@ -49,8 +49,15 @@ function rollDice() {
         dices[i].setAttribute("class", "dice red");
         misses.innerText ++;
     }
+    }
 }
+
+closeDiv = () => {
+    let fourthWindow = document.getElementById("fourth");
+    fourthWindow.setAttribute("class", "none");
+
 }
+
 
 function saveDicesToStorage() {
     const savedDices = div2.innerHTML;
