@@ -2,7 +2,6 @@
 
 body {
     background-color: rgb(88, 55, 33);
-    font-family: 'Indie Flower', cursive;
     color: chartreuse;
     display: flex;
     width: 100%;
@@ -60,7 +59,7 @@ span {
 
 h1 {
     font-size: 2vw;
-    margin-bottom: 8vw;
+    margin-bottom: 2vw;
 }
 
 p, label {
@@ -71,7 +70,6 @@ p, label {
 
 p, li, label {
     font-size: 1.5vw;
-    margin-bottom: 0.5vh;
 }
 
 select {
@@ -85,16 +83,7 @@ select {
     border: none;
     border-radius: 5px;
 }
-input[type=number] {
-    height: 2vw;
-    width: 7vw;
-    font-size: 2vh;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    background-color: rgb(9, 1, 22);
-    color: rgba(191, 192, 191, 0.692);
-}
+
 button {
     height: 4vh;
     width: 18vh;
@@ -134,24 +123,27 @@ button:active {
 
 @media screen and (max-width:450px) {
     .container {
-        grid-template-areas:
-        "first first first first first first first first"
-        "first first first first first first first first"
-        "first first first first first first first first"
-        "third third third third third third third third"
-        "second second second second second second second second"
-        "second second second second second second second second"
-        "second second second second second second second second"
-        "second second second second second second second second";
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
     }
+
+    .first {
+        grid-area: 1 / 1 / 3 / 9;
+    }    
     .second {
+        grid-area: 4 / 1 / 9 / 9;
         align-content: flex-start;
         justify-content: space-evenly;
         padding: 4vw;
     }
     .third {
-        flex-direction: row;
-        
+        grid-area: 3 / 1 / 4 / 9;
+        flex-direction: row;   
+    }
+    .fourth {
+        grid-area: 1 / 3 / 9 / 7;
     }
     .dice {
         font-size: 12vw;
@@ -162,11 +154,7 @@ button:active {
         margin: 1vh;
         font-size: 1.5vh;
     }
-    input[type=number] {
-        height: 1.5vh;
-        width: 6vh;
-        font-size: 1.5vh;
-    }
+
     select {
         height: 2.5vh;
         width: 25vw;
@@ -177,11 +165,7 @@ button:active {
         margin-top: 1vh;
         justify-content: center;
     }
-    h3 {
-        font-size: 3vw;
-        margin-bottom: 0.5vh;
-    }
     p {
-        font-size: 5vw;
+        font-size: 1.5vw;
     }
 }
