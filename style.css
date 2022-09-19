@@ -144,6 +144,7 @@ button:active {
     }
     .fourth {
         grid-area: 1 / 3 / 9 / 7;
+        justify-content: center;
     }
     .dice {
         font-size: 12vw;
@@ -165,7 +166,8 @@ button:active {
         margin-top: 1vh;
         justify-content: center;
     }
-    p {
-        font-size: 1.5vw;
+    p, li {
+        font-size: 1.5vh;
+        list-style: none;
     }
 }
