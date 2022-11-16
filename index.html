@@ -13,19 +13,18 @@
         <div class="first">
             <h1>Board Game Dice Roller</h1>
             <span>
-                <label>Typ jednostki</label>
+                <label>Type of unit</label>
                 <select id="unit_type">
-                    <option value="" disabled selected>Wybierz</option>
-                    <option value="3">Dowódca(3 kości)</option>
-                    <option value="4">Dowódca(4 kości)</option>
-                    <option value="5">Dowódca(5 kości)</option>
-                    <option value="2">Przyboczny(2 kości)</option>
-                    <option value="1">Wojownik(1 kość)</option>
-                    <option value="0.5">Wieśniak(0.5 kości)</option>
+                    <option value="" disabled selected>Select</option>
+                    <option value="5">Mounted Elite(5 dice)</option>
+                    <option value="4">Elite(4 dice)</option>
+                    <option value="3">Heartguard(3 dice)</option>
+                    <option value="2">Warrior(2 dice)</option>
+                    <option value="1">Levy(1 die)</option>
                 </select>
-                <label>Liczba zołnierzy w oddziale</label>
+                <label>Number of soldiers in unit</label>
                 <select id="numberOf">
-                    <option value="" disabled selected>Wybierz</option>
+                    <option value="" disabled selected>Select</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -33,7 +32,7 @@
                     <option value="5">5</option>
                     <option value="6">6</option>
                 </select>
-                <label>Dodatkowe kości</label>
+                <label>Bonus dice</label>
                 <select id="numberOfAdd">
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -47,9 +46,9 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                 </select>
-                <label>Wskaźnik obrony przeciwnika</label>
+                <label>Defence value of enemy</label>
                 <select id="numberOfDeff">
-                    <option value="" disabled selected>Wybierz</option>
+                    <option value="" disabled selected>Select</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -59,29 +58,16 @@
                 </select>
             </span>
             <span class="buttonspan">
-                <button onclick="getDicesFromStorage()">Wczytaj wynik</button>
-                <button onclick="saveDicesToStorage()">Zapisz wynik</button>
-                <button onclick="generateDice()">Generuj</button>
-                <button onclick="rollDice()">Rzuć</button>
+                <button onclick="getDicesFromStorage()">Load roll</button>
+                <button onclick="saveDicesToStorage()">Save roll</button>
+                <button onclick="generateDice()">Generate dice</button>
+                <button onclick="rollDice()">Roll dice</button>
             </span>
         </div>
         <div class="second"></div>
         <div class="third">
-            <h1 class="green">Trafiło:<h1 class="green" id="hits">0</h1></h1>
-            <h1 class="red">Chybiło:<h1 class="red" id="misses">0</h1></h1>
-        </div>
-        <div class="fourth" id="fourth">
-            <h1>Board Game Dice Roller</h1>
-            <p>Aplikacja symuluje rzucanie kośćmi w nieistniejącej wojennej grze planszowej. Ilość wygenerowanych kości zależy od kilku modyfikatorów: </p>
-            <ul>
-                <li>Typ jednostki - każdy typ jednostki posiada swoją unikatową liczbę kości</li><br>
-                <li>Liczba żołnierzy w oddziale</li><br>
-                <li>Dodatkowe kości</li>
-            </ul>
-            <p>Ostateczną liczbę kości oblicza się według wzoru:</p>
-            <p>(Typ jednostki * Liczba żołnierzy) + Dodatkowe kości</p>
-            <p>Wskaźnik obrony przeciwnika określa minimalny wynik rzutu potrzebny do zadania obrażenia. </p>
-            <button onclick="closeDiv()">Rozumiem</button>
+            <h1 class="green">Hits:<h1 class="green" id="hits">0</h1></h1>
+            <h1 class="red">Misses:<h1 class="red" id="misses">0</h1></h1>
         </div>
     </div>
     <script src="script.js"></script>

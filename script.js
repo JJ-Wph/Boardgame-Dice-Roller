@@ -1,11 +1,10 @@
 const form1 = document.getElementById("unit_type");
 const optionIndex = form1.getElementsByTagName("option")
-const warlord6 = optionIndex[1].value;
-const warlord8 = optionIndex[2].value;
-const warlord10 = optionIndex[3].value;
-const heartguards = optionIndex[4].value;
-const warriors = optionIndex[5].value;
-const levys = optionIndex[6].value;
+const mountedElite = optionIndex[1].value;
+const elite = optionIndex[2].value;
+const heartguards = optionIndex[3].value;
+const warrior = optionIndex[4].value;
+const levy = optionIndex[5].value;
 const div2 = document.querySelector(".second");
 const dices = document.getElementsByClassName('dice');
 const hits = document.getElementById("hits");
@@ -18,7 +17,7 @@ function generateDice() {
     let two = parseInt(numberOf.value, 10);
     let three = parseInt(numberOfAdd.value, 10);
     let diceNumber = one * two + three;
-    console.log("Liczba kości: " + diceNumber + " (" + one + " x " + two + " + " + three + ")");
+    console.log("Dice number: " + diceNumber + " (" + one + " x " + two + " + " + three + ")");
     div2.innerHTML = "";
     hits.innerHTML = "0";
     misses.innerHTML = "0";
@@ -37,18 +36,18 @@ function rollDice() {
     parseInt(misses.innerText, 10);
     hits.innerText = 0;
     misses.innerText = 0;
-    for (i = 0; i <= dices.length; i++) {
+    for (i = 0; i < dices.length; i++) {
         min = Math.ceil(1);
         max = Math.floor(6);
         const result = Math.floor(Math.random() * (max - min + 1)) + min;
-        dices[i].innerText = result;
-    if (result >= defence) {
-        dices[i].setAttribute("class", "dice green");
-        hits.innerText ++;
-    } else {
-        dices[i].setAttribute("class", "dice red");
-        misses.innerText ++;
-    }
+        dices[i].innerHTML = result;
+        if (result >= defence) {
+            dices[i].setAttribute("class", "dice green");
+            hits.innerText ++;
+        } else {
+            dices[i].setAttribute("class", "dice red");
+            misses.innerText ++;
+        }
     }
 }
 
